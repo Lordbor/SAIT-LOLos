@@ -5,7 +5,6 @@ body{
 
 div{
 	display: block;
-
 }
 
 #shapka{
@@ -13,8 +12,7 @@ div{
 	width: 100%;
 	height: 60px;
 	background: #303030;
-	z-index: 2;
-
+	z-index: 10000;
 }
 
 #logo{
@@ -30,7 +28,7 @@ div{
 
 #logo:hover{
 	background: #e56363;
-	    	transition-duration: .5s;
+	transition-duration: .5s;
 }
 
 #main{
@@ -39,24 +37,34 @@ div{
 }
 
 #action{
+	text-align: center;
+	background-image: url('../images/fon-active.png');
+	background-position: center center; 
+	background-repeat: no-repeat; 
+	background-attachment: fixed; 
+	background-size: cover; 
+	background-color: #464646;
+	background-position-y: 60px;
 	position: relative;
+	background-size: cover;
 	width: 100%;
 	height: 800px;
 }
 
 #image-action{
 	position: relative;
-	width: 100%;
+	width: 1366px;
 	height: 800px;
 	top: 60px;
 }
 
 #image-action-left{
+
 	position: absolute;
-	left: 20px;
-	width: 700px;
-	height: 280px;
-	top: 130px;
+	left: 10%;
+	width: 50%;
+	height: 30%;
+	top: 25%;
 	z-index: 1;
 }
 
@@ -84,27 +92,23 @@ div{
 	position: relative;
 	width: 100%;
 	height: 500px;
-
 	background: #303030;
 }
 #links{
-	    position: absolute;
-	    width: 950px;
-	    height: 50px;
+	position: absolute;
+	width: 950px;
+	height: 50px;
     left: 50%;
-
     top: 50%;
     transform: translate(-50%, -50%);
 }
+
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     width: 100%;
     background-color: #f1f1f1;
-
-
-
 }
 
 li a {
@@ -114,7 +118,7 @@ li a {
     text-decoration: none;
     float: left;
     font-size: 25px;
-    	transition-duration: 1s;
+    transition-duration: 1s;
 }
 
 /* Change the link color on hover */
@@ -123,3 +127,46 @@ li a:hover {
     background-color: #555;
     color: white;
 }
+
+button {
+	z-index: 3;
+	position: absolute;
+	left: 18%;
+	top: 460px;
+        display: inline-block;
+        background-color: #7b38d8;
+        border-radius: 10px;
+        border: 4px double #cccccc;
+        color: #ffffff;
+        text-align: center;
+        font-size: 28px;
+        padding: 20px;
+        width: 200px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+      }
+      button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+      }
+      button span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+      }
+      button:hover {
+        background-color: #f7c2f9;
+      }
+      button:hover span {
+        padding-right: 25px;
+      }
+      button:hover span:after {
+        opacity: 1;
+        right: 0;
+      }
